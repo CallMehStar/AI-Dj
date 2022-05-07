@@ -39,8 +39,8 @@ function draw(){
             Peter_pan_song.play();
         }
         else{
-            console.log("Song Name: Peter Pan Song");
-            document.getElementById("song_id").innerHTML = "Song Name: Peter Pan Song";
+            console.log("Song Name: Flowers");
+            document.getElementById("song_id").innerHTML = "Song Name: Flowers";
         }
     }
 }
