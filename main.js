@@ -1,13 +1,13 @@
-Peter_pan_song="";
-Harry_potter_theme_song="";
+flowers_song="";
+Missing_someone_song="";
 rightWrist_x = 0;
 rightWrist_y = 0;
 leftWrist_x = 0;
 leftWrist_y = 0;
 scoreleftWrist = 0;
 scorerightWrist = 0;
-song_Peter_pan = "";
-song_Harry_potter_theme = "";
+song_flowers = "";
+song_missing_someone = "";
 
 function setup(){
     canvas = createCanvas(600,530);
@@ -21,8 +21,8 @@ function setup(){
 }
 
 function preload(){
-    Peter_pan_song = loadSound("musicflowers.mp3");
-    Harry_potter_theme_song = loadSound("musicmissingsomeone.mp3");
+    flowers_song = loadSound("musicflower.mp3");
+    Missing_someone_song = loadSound("musicmissingsomeone.mp3");
 }
 
 function draw(){
@@ -31,17 +31,17 @@ function draw(){
     fill("#00ff00");
     stroke("#ff0000");
 
-    song_Peter_pan = Peter_pan_song.isPlaying();
-    console.log(song_Peter_pan);
+    song_flowers = flowers_song.isPlaying();
+    console.log(song_flowers);
 
-    song_Harry_potter_theme = Harry_potter_theme_song.isPlaying();
+    song_missing_someone = Missing_someone_song.isPlaying();
     console.log(song_Harry_potter_theme);
 
     if(scoreleftWrist > 0.2){
         circle(leftWrist_x,leftWrist_y,20);
-        Harry_potter_theme_song.stop();
-        if(song_Peter_pan == false){
-            Peter_pan_song.play();
+        Missing_someone_song.stop();
+        if(song_flowers == false){
+            flowers_song.play();
         }
         else{
             console.log("Song Name: Flowers");
@@ -51,9 +51,9 @@ function draw(){
 
     if(scorerightWrist > 0.2){
         circle(rightWrist_x,rightWrist_y,20);
-        Peter_pan_song.stop();
-        if(song_Harry_potter_theme == false){
-            Harry_potter_theme_song.play();
+        flowers_song.stop();
+        if(song_missing_someone == false){
+            Missing_someone_song.play();
         }
         else{
             console.log("Song Name: Missing Someone");
